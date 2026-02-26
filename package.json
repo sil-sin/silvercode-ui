@@ -1,0 +1,56 @@
+{
+  "name": "@silvercode-ui/lib",
+  "version": "0.0.0",
+  "description": "Reusable React UI component library",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "version": "changeset version",
+    "release": "npm run build && changeset publish"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sil-sin/silvercode-ui.git"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "@storybook/react-vite": "^10.2.12",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "storybook": "^10.2.12",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
